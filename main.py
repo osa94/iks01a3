@@ -38,18 +38,21 @@ time_s = np.linspace(TIME_MIN, TIME_MAX, SAMPLES_NR)
 humidity_y = [0] * SAMPLES_NR
 temperature_y = [0] * SAMPLES_NR
 
-def update(axis, values, new_value):
+def update(axis, values, new_value, title, x_name, y_name):
     axis.clear()
     axis.grid()
     axis.set_ylim(HUMIDITY_MIN, HUMIDITY_MAX)
     axis.set_xlim(TIME_MIN, TIME_MAX)
+    axis.set_title(title, loc='left')
+    axis.set_xlabel(x_name)
+    axis.set_ylabel(y_name)
     del values[-1]
     values.insert(0, new_value)
     axis.plot(time_s, values)
 
 def animate(i):
-    update(humidity_ax, humidity_y, hts221.read_humidity())
-    update(temperature_ax, temperature_y, hts221.read_temperature())
+    update(humidity_ax, humidity_y, hts221.read_humidity(), 'Humidity', 'time', 'relative humidity [%]')
+    update(temperature_ax, temperature_y, hts221.read_temperature(), 'Temperature', 'time', 'temperature °C')
 
 if __name__ == '__main__':
     ani = FuncAnimation(fig, animate, interval=100, cache_frame_data=False)
