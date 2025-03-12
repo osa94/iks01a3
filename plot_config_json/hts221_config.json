@@ -1,0 +1,52 @@
+{
+  "humidity": {
+    "xlim": {
+      "left": 0,
+      "right": 10
+    },
+    "ylim": {
+      "bottom": 0,
+      "top": 100
+    },
+    "title": {
+      "label": "Humidity",
+      "loc": "center"
+    },
+    "xlabel": {
+      "xlabel": "Time [s]",
+      "loc": "center"
+    },
+    "ylabel": {
+      "ylabel": "Relative humidity [%]",
+      "loc": "center"
+    },
+    "grid": {
+      "visible": true
+    }
+  },
+  "temperature": {
+    "xlim": {
+      "left": 0,
+      "right": 10
+    },
+    "ylim": {
+      "bottom": -40,
+      "top": 120
+    },
+    "title": {
+      "label": "Temperature",
+      "loc": "center"
+    },
+    "xlabel": {
+      "xlabel": "Time [s]",
+      "loc": "center"
+    },
+    "ylabel": {
+      "ylabel": "Temperature [°C]",
+      "loc": "center"
+    },
+    "grid": {
+      "visible": true
+    }
+  }
+}
