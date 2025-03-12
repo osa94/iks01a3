@@ -48,5 +48,4 @@ if __name__ == '__main__':
     ani = FuncAnimation(fig, animate, interval=100, cache_frame_data=False)
     mng = plt.get_current_fig_manager()
     mng.set_window_title("iks01a3 sensor readings")
-    mng.window.state('zoomed')
     plt.show()
